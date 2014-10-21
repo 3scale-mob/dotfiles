@@ -1,0 +1,54 @@
+alias b="bundle --binstubs .bundle/bin"
+alias vim=/usr/local/bin/vim
+
+alias be="bundle exec"
+
+alias rake="noglob rake"
+alias bake="be rake"
+
+alias ls="ls -h"
+alias l="ls -lAh"
+
+alias system_lunchy="rvm system do lunchy"
+alias start="system_lunchy start -F"
+alias stop="system_lunchy stop"
+
+alias g='git status -bs'
+alias gs='git stash save --keep-index'
+
+alias -g G='| grep '
+
+alias gut='git'
+alias cap='noglob cap'
+
+alias zake="zeus rake"
+alias zails="zeus rails"
+alias zt="zeus test"
+
+alias c="cucumber -f pretty --drb"
+alias cu="be cucumber -f pretty $*"
+alias cuf="be cucumber -f pretty -t @focus $*"
+
+alias fswitch="'/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession' -suspend"
+
+#alias rt="ruby -Itest -I. -e \"require'pathname';P=Pathname;ARGV.map{|a|p=P.new(a);next unless p.exist?;p.directory?? P.glob(p.join('**/*.rb')):p}.flatten.compact.uniq.each{|p|require p.expand_path}\""
+
+
+alias git-history="git log --author="michal" --format=format:%ad --date=short | sort | uniq -c"
+alias cu="be cucumber $*"
+alias cuf="be cucumber -t @focus $*"
+alias zu="zeus cucumber $*"
+alias zc="zu $*"
+
+alias macvim='mvim'
+alias ru="ssh rt -t tmux attach -t rtorrent"
+
+alias unr="unicorn_rails -c config/unicorn.rb"
+
+alias hosts="sudo mvim /etc/hosts"
+
+
+__make_git_io() {
+  curl -i http://git.io -F "url=$1"
+}
+alias git.io=__make_git_io
