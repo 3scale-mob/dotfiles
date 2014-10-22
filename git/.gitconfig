@@ -1,0 +1,65 @@
+# ADD LOCAL CONFIGURATION HERE
+
+
+# DO NOT EDIT BELOW THIS LINE
+[push]
+	default = current
+[branch]
+  autosetupmerge = true
+[color]
+ diff = auto
+ status = auto
+ branch = auto
+ interactive = auto
+[color "branch"]
+ current = yellow reverse
+ local = yellow 
+ remote = green
+[color "diff"]
+ meta = yellow bold
+ frag = magenta bold
+ old = red bold
+ new = green bold
+[color "status"]
+ added = yellow
+ changed = green
+ untracked = cyan
+[core]
+	excludesfile = /Users/mikz/.gitignore
+	trustctime = false
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
+[alias]
+  ap = add -p
+  cl = checkout -- .
+  st = status
+  di = diff
+  dic = diff --cached
+  rbc = rebase --continue
+  rbi = rebase -i
+  stashc = stash save --keep-index
+  up = !git pull --rebase || (git rebase --abort && git pull --no-rebase)
+
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+
+[github]
+	user = mikz
+  password = !security find-internet-password -a mikz -s github.com -w | tr -d '\n'
+
+[user]
+	name = Michal Cichra
+	email = michal@o2h.cz
+[diff]
+[rerere]
+	enabled = 0
+
+[help]
+	autocorrect = 5
+[gist]
+	private = yes
+	browse = yes
+[credential]
+	helper = osxkeychain
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
