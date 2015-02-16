@@ -1,11 +1,7 @@
-# ADD LOCAL CONFIGURATION HERE
-
-
-# DO NOT EDIT BELOW THIS LINE
 [push]
-	default = current
+ default = simple
 [branch]
-  autosetupmerge = true
+ autosetupmerge = true
 [color]
  diff = auto
  status = auto
@@ -25,7 +21,7 @@
  changed = green
  untracked = cyan
 [core]
-	excludesfile = /Users/mikz/.gitignore
+	excludesfile = ~/.gitignore
 	trustctime = false
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
@@ -61,5 +57,8 @@
 [credential]
 	helper = osxkeychain
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[pre-commit]
+	ruby = rvm-auto-ruby

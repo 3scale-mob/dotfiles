@@ -1,6 +1,7 @@
 alias b="bundle --binstubs .bundle/bin"
 alias vim=/usr/local/bin/vim
 
+alias curl='curl -4'
 alias be="bundle exec"
 
 alias rake="noglob rake"
@@ -24,6 +25,7 @@ alias cap='noglob cap'
 alias zake="zeus rake"
 alias zails="zeus rails"
 alias zt="zeus test"
+alias rt="ruby -Itest"
 
 alias c="cucumber -f pretty --drb"
 alias cu="be cucumber -f pretty $*"
