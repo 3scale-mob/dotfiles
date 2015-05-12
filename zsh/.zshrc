@@ -79,4 +79,4 @@ export RPS1="%{$fg[red]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} $EPS1"
 autoload -U compinit ; compinit
 
 # added by travis gem
-[ -f /Users/mikz/.travis/travis.sh ] && source /Users/mikz/.travis/travis.sh
+[ -f "${HOME}/.travis/travis.sh" ] && source "${HOME}/.travis/travis.sh"
