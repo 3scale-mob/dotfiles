@@ -19,7 +19,9 @@ alias gs='git stash save --keep-index'
 
 alias -g G='| grep '
 
+alias git=hub
 alias gut='git'
+alias gti=git
 alias cap='noglob cap'
 
 alias zake="zeus rake"

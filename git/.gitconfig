@@ -27,6 +27,7 @@
   pretty = %Cblue%h%Creset %Cgreen[%ar]%Creset (%an) %s
 [alias]
   ap = add -p
+  co = checkout
   cl = checkout -- .
   st = status
   di = diff
@@ -39,12 +40,12 @@
   snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 
 [github]
-	user = mikz
-  password = !security find-internet-password -a mikz -s github.com -w | tr -d '\n'
+	user = 3scale-mob
+  password = !security find-internet-password -a 3scale-mob -s github.com -w | tr -d '\n'
 
 [user]
-	name = Michal Cichra
-	email = michal@o2h.cz
+	name = 3scale MOB
+	email = mob@3scale.net
 [diff]
 [rerere]
 	enabled = 0
